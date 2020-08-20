@@ -1,0 +1,110 @@
+<html>
+<head>
+<style>
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+var v=0;
+$("#btn1,#btn2,#btn3,#btn4,#btn5,#btn6,#btn7,#btn8,#btn9").click(function(){
+v++;
+if($(this).val() == " ")
+if(v%2!=0) {  
+$(this).val("O");
+$("input:text").val("Player 2 turn");}
+else{
+$(this).val("X");
+$("input:text").val("Player 1 turn");}
+});
+$("#btn1,#btn2,#btn3,#btn4,#btn5,#btn6,#btn7,#btn8,#btn9").click(function(){ 
+if(v=="9")
+    $("input:text").val("Match Drawn");
+if($("#btn1").val()==$("#btn2").val() && $("#btn2").val()==$("#btn3").val())
+{
+	if($("#btn1").val() == "O")
+        $("input:text").val("Player 1 is Winner");
+    if($("#btn1").val() == "X")
+        $("input:text").val("Player 2 is Winner");
+}
+if($("#btn1").val()==$("#btn4").val() && $("#btn4").val()==$("#btn7").val())
+{
+	if($("#btn1").val() == "O")
+        $("input:text").val("Player 1 is Winner");
+    if($("#btn1").val() == "X")
+        $("input:text").val("Player 2 is Winner");
+}
+if($("#btn1").val()==$("#btn5").val() && $("#btn5").val()==$("#btn9").val())
+{
+	if($("#btn1").val() == "O")
+        $("input:text").val("Player 1 is Winner");
+    if($("#btn1").val() == "X")
+        $("input:text").val("Player 2 is Winner");
+}
+if($("#btn2").val()==$("#btn5").val() && $("#btn5").val()==$("#btn8").val())
+{
+	if($("#btn2").val() == "O")
+        $("input:text").val("Player 1 is Winner");
+    if($("#btn2").val() == "X")
+        $("input:text").val("Player 2 is Winner");
+}
+    
+if($("#btn3").val()==$("#btn5").val() && $("#btn5").val()==$("#btn7").val())
+{
+	if($("#btn3").val() == "O")
+        $("input:text").val("Player 1 is Winner");
+    if($("#btn3").val() == "X")
+        $("input:text").val("Player 2 is Winner");
+}
+    
+if($("#btn3").val()==$("#btn6").val() && $("#btn6").val()==$("#btn9").val())
+{
+	if($("#btn3").val() == "O")
+        $("input:text").val("Player 1 is Winner");
+    if($("#btn3").val() == "X")
+        $("input:text").val("Player 2 is Winner");
+}
+    
+if($("#btn4").val()==$("#btn5").val() && $("#btn5").val()==$("#btn6").val())
+{
+	if($("#btn4").val() == "O")
+        $("input:text").val("Player 1 is Winner");
+    if($("#btn4").val() == "X")
+        $("input:text").val("Player 2 is Winner");
+}
+    
+if($("#btn7").val()==$("#btn8").val() && $("#btn8").val()==$("#btn9").val())
+{
+	if($("#btn7").val() == "O")
+        $("input:text").val("Player 1 is Winner");
+    if($("#btn7").val() == "X")
+        $("input:text").val("Player 2 is Winner");
+}
+});
+});
+</script>
+
+</head>
+
+<body>
+<table style="border:1px;">
+<tr>
+<form>
+<input id="txt1" type="text" id="" style="height:80px;width:400px;" value="Player 1 turn">
+<br><br>
+<input id="btn1" type="button" value=" " style="height:80px;width:128px;">&nbsp;
+<input id="btn2" type="button" value=" " style="height:80px;width:128px;">&nbsp;
+<input id="btn3" type="button" value=" " style="height:80px;width:128px;">
+<br><br>
+<input id="btn4" type="button" value=" " style="height:80px;width:128px;">&nbsp;
+<input id="btn5" type="button" value=" " style="height:80px;width:128px;">&nbsp;
+<input id="btn6" type="button" value=" " style="height:80px;width:128px;">
+<br><br>
+<input id="btn7" type="button" value=" " style="height:80px;width:128px;">&nbsp;
+<input id="btn8" type="button" value=" " style="height:80px;width:128px;">&nbsp;
+<input id="btn9" type="button" value=" " style="height:80px;width:128px;">
+</form>
+</tr>
+</table>
+
+</body>
+</html>
